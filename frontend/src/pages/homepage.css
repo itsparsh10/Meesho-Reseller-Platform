@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.homepage {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.brand {
+  color: #f43397;
+  font-size: 24px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+.login-btn, .start-selling-btn {
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.login-btn {
+  background: white;
+  border: 1px solid #f43397;
+  color: #f43397;
+}
+.start-selling-btn {
+  background: #f43397;
+  border: none;
+  color: white;
+  border-radius: 2px;
+}
+.hero {
+  background: #fff8fa;
+  padding: 10px 20px;
+}
+
+.hero-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+.text-content {
+  flex: 1;
+}
+.main-heading {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.pink-text {
+  color: #f43397;
+}
+.subtitle {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 30px;
+}
+.gstin-box {
+  background: #fff8fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.new-badge {
+  background: #fce5f2;
+  color: #f43397;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-right: 10px;
+}
+.phone-input-box {
+  display: flex;
+  margin-top: 40px;
+}
+.phone-input {
+  flex: 1px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px ;
+}
+
+.country-code {
+  color: #666;
+  margin-right: 10px;
+}
+.phone-input input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+}
+.image-content {
+  flex: 1;
+}
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+}
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 50px auto 0;
+  gap: 20px;
+}
+.stat-box {
+  background: #f6f7f9;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+}
+.stat-box h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .stats-container {
+    flex-wrap: wrap;
+  }
+  
+  .stat-box {
+    flex: 1 1 40%;
+  }
+}
+  

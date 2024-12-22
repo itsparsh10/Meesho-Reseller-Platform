@@ -1,0 +1,281 @@
+/* Main Container Styles */
+.orders-section {
+  padding: 25px;
+  background: #f9f9f9;
+}
+
+.section-header {
+  margin-bottom: 25px;
+}
+
+.section-header h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-header h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #f43397;
+  border-radius: 2px;
+}
+
+/* Order List Grid */
+.orders-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Order Card Styles */
+.order-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(244, 51, 151, 0.15);
+  border-color: #f43397;
+}
+
+/* Order Header */
+.order-header {
+  background: linear-gradient(135deg, #f43397 0%, #ff5eb1 100%);
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+.customer-info {
+  margin-bottom: 8px;
+}
+
+.customer-info h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: rgb(5, 5, 5);
+}
+
+.order-id {
+  font-size: 13px;
+  opacity: 0.9;
+  display: block;
+  margin-top: 4px;
+  color: #333;
+}
+
+/* Status Badge */
+.status {
+  background-color: yellow;
+  color: #333;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.status.new-order {
+  background: #fff3dc;
+  color: #ff6b00;
+}
+
+.status.processing {
+  background: #e5f1ff;
+  color: #0066ff;
+}
+
+.status.shipped {
+  background: #e7f6e7;
+  color: #00994d;
+}
+
+/* Order Details */
+.order-details {
+  padding: 20px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 15px;
+  background: #fafafa;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.detail-row:hover {
+  background: #fff5f9;
+}
+
+.detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  width: 110px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.value {
+  flex: 1;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.value.amount {
+  color: #f43397;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.value.address {
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Order Actions */
+.order-actions {
+  padding: 15px 20px;
+  background: #fafafa;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-btn {
+  background: #f43397;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(244, 51, 151, 0.2);
+}
+
+.contact-btn i {
+  font-size: 16px;
+}
+
+.contact-btn:hover {
+  background: #e62e8b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 51, 151, 0.3);
+}
+
+/* Order Header Styles */
+.order-header {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.order-header h1 {
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Loading State */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #ffd6e9;
+  border-top: 3px solid #f43397;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 40px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .orders-list {
+    grid-template-columns: 1fr;
+  }
+
+  .order-card {
+    margin-bottom: 20px;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .label {
+    width: 100%;
+    margin-bottom: 4px;
+    color: #999;
+  }
+
+  .value {
+    padding-left: 0;
+  }
+
+  .order-header h1 {
+    font-size: 24px;
+  }
+
+  .status {
+    position: static;
+    display: inline-block;
+    margin-top: 10px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.order-card {
+  animation: fadeIn 0.3s ease-out;
+}
